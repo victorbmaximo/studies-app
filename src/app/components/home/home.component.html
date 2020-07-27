@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Communication between Brothers Component</h5>
+        <hr>
+        <div class="col-md-12">
+          <p>Received data through BehaviorSubject: <strong>{{dataFromCommunication}}</strong></p>
+        </div>
+        <div class="col-md-12">
+          <p>Received data through Observable and Of: <strong>{{dataFromCommunication2}}</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Getter and Setter</h5>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <input type="text" class="form-control" placeholder="Username" [(ngModel)]="name">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <p>Your Name: {{name}}</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="row">
+    <div class="col-md-6">
+      aa
+    </div>
+    <div class="col-md-6">
+      bb
+    </div>
+  </div> -->
+  </div>

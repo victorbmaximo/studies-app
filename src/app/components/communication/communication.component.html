@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Main Component</h5>
+      <hr>
+      <div class="form-group">
+        <label for="exampleInputEmail1"> Write data to send</label>
+        <input type="text" class="form-control" [(ngModel)]="dataToSend">
+      </div>
+      <button class="btn btn-primary" (click)="sendAnyData()">Send</button>
+
+      <br>
+      <br>
+      <p>{{receivedValue}}</p>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Child Component</h5>
+      <hr>
+      <app-child (emitedValue)="receiveValue( $event )"></app-child>
+    </div>
+  </div>
+</div>

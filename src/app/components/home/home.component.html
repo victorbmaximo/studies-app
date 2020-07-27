@@ -5,7 +5,7 @@
         <h5 class="card-title">Communication between Brothers Component</h5>
         <hr>
         <div class="col-md-12">
-          <p>Received data through BehaviorSubject: <strong>{{dataFromCommunication}}</strong></p>
+          <p>Received data through BehaviorSubject and Next: <strong>{{dataFromCommunication}}</strong></p>
         </div>
         <div class="col-md-12">
           <p>Received data through Observable and Of: <strong>{{dataFromCommunication2}}</strong></p>
@@ -23,7 +23,8 @@
           <div class="col-md-6">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <input type="text" class="form-control" placeholder="Username" [(ngModel)]="name">
+                <input type="text" class="form-control" placeholder="Username" (ngModelChange)="dataChanged($event)"
+                  [(ngModel)]="name">
               </div>
             </div>
 

@@ -5,7 +5,7 @@ import { Subject, BehaviorSubject, of, Observable, ReplaySubject } from 'rxjs';
   providedIn: 'root',
 })
 export class CommunicationService {
-  constructor() {}
+  constructor() { }
 
   data = new EventEmitter<any>();
   data2: BehaviorSubject<any> = new BehaviorSubject<any>('');

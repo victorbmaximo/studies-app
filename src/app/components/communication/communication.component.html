@@ -19,7 +19,7 @@
     <div class="card-body">
       <h5 class="card-title">Child Component</h5>
       <hr>
-      <app-child (emitedValue)="receiveValue( $event )"></app-child>
+      <app-child (emitedValue)="receiveValue( $event )" [writedData]="dataToSend"></app-child>
     </div>
   </div>
 </div>

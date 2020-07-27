@@ -7,12 +7,12 @@ import { CommunicationService } from 'src/app/services/communication.service';
   styleUrls: ['./communication.component.scss'],
 })
 export class CommunicationComponent implements OnInit {
-  constructor(private communication: CommunicationService) {}
+  constructor(private communication: CommunicationService) { }
 
   dataToSend;
   receivedValue;
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   sendAnyData() {
     this.communication.sendData(this.dataToSend);

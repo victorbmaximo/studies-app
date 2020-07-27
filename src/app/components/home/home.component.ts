@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommunicationService } from 'src/app/services/communication.service';
 
 @Component({
@@ -7,11 +7,12 @@ import { CommunicationService } from 'src/app/services/communication.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private communication: CommunicationService) {}
+  constructor(private communication: CommunicationService) { }
 
   dataFromCommunication;
   dataFromCommunication2;
   private _name: string;
+
 
   set name(name: string) {
     this._name = name;
@@ -24,6 +25,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.receiveData();
     this.name = 'Isa';
+  }
+
+  dataChanged(e) {
+    console.log(e);
   }
 
   receiveData() {

@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <hr>
+    <button class="btn btn-primary" (click)="connect()" *ngIf="!connected">Connect</button>
+    <button class="btn btn-primary" (click)="disconnect()" *ngIf="connected">Disconnect</button>
+    <hr>
+    <div>
+      <p *ngFor="let s of log">
+        {{s}}
+      </p>
+    </div>
+  </div>
+</div>

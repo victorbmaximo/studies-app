@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Event click</h5>
+      <hr>
+      <button #myButton class="btn btn-primary">Click</button>
+      <p>{{resultClicked}}</p>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">HotObservable</h5>
+      <p>
+        Using Subjects, Publish/RefCount and Share
+      </p>
+      <hr>
+      <p>{{s1}}</p>
+      <p>{{n1}}</p>
+      <p>{{s2}}</p>
+      <p>{{n2}}</p>
+    </div>
+  </div>
+
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Types of Subjects</h5>
+      <hr>
+      <button class="btn btn-primary" (click)="connect()">Connect</button>
+      <hr>
+      <div class="row">
+        <div class="col-md-3 content-subject">
+          <app-subjects name="Subject" [subject]="subject"></app-subjects>
+        </div>
+        <div class="col-md-3 content-subject">
+          <app-subjects name="Replay Subject" [subject]="replaySubject"></app-subjects>
+        </div>
+        <div class="col-md-3 content-subject">
+          <app-subjects name="Async Subject" [subject]="asyncSubject"></app-subjects>
+        </div>
+        <div class="col-md-3 content-subject">
+          <app-subjects name="Behavior Subject" [subject]="behaviorSubject"></app-subjects>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

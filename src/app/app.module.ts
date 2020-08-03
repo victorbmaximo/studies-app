@@ -10,6 +10,8 @@ import { FooterComponent } from './template/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { CommunicationComponent } from './components/communication/communication.component';
 import { ChildComponent } from './components/communication/child/child.component';
+import { ObservablesSubjectsComponent } from './components/observables-subjects/observables-subjects.component';
+import { SubjectsComponent } from './components/observables-subjects/subjects/subjects.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +21,11 @@ import { ChildComponent } from './components/communication/child/child.component
     HomeComponent,
     CommunicationComponent,
     ChildComponent,
+    ObservablesSubjectsComponent,
+    SubjectsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

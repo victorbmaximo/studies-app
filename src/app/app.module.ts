@@ -12,6 +12,9 @@ import { CommunicationComponent } from './components/communication/communication
 import { ChildComponent } from './components/communication/child/child.component';
 import { ObservablesSubjectsComponent } from './components/observables-subjects/observables-subjects.component';
 import { SubjectsComponent } from './components/observables-subjects/subjects/subjects.component';
+import { RxjsComponent } from './components/rxjs/rxjs.component';
+import { BasicCreationComponent } from './components/rxjs/basic-creation/basic-creation.component';
+import { OperatorsComponent } from './components/rxjs/operators/operators.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { SubjectsComponent } from './components/observables-subjects/subjects/su
     CommunicationComponent,
     ChildComponent,
     ObservablesSubjectsComponent,
-    SubjectsComponent
+    SubjectsComponent,
+    RxjsComponent,
+    BasicCreationComponent,
+    OperatorsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],

@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">
+      Operators
+    </h5>
+    <hr>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="title">Map</h5>
+        <br>
+        <p>
+          Posição do Click<br />
+          Screen X: <span *ngIf="positionClick.screenX > 0">{{positionClick.screenX}}</span><br />
+          Screen Y: <span *ngIf="positionClick.screenY > 0">{{positionClick.screenY}}</span>
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="title">Filter</h5>
+        <br>
+        <p>Print even numbers only</p>
+        <p>{{evenNumbers}}</p>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="title">Tap</h5>
+        <br>
+        <p *ngFor="let p of printTapResult">
+          {{p}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

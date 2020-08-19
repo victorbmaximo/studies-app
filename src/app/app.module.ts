@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +31,7 @@ import { OperatorsComponent } from './components/rxjs/operators/operators.compon
     BasicCreationComponent,
     OperatorsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

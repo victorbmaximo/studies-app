@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\components",
+    "\\src\\app\\components\\rxjs",
+    "\\src\\app\\components\\rxjs\\operators"
+  ],
+  "SelectedNode": "\\src\\app\\components\\rxjs\\operators\\operators.component.ts",
+  "PreviewInSolutionExplorer": false
+}

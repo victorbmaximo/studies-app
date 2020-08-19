@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'communication', component: CommunicationComponent },
   { path: 'observables', component: ObservablesSubjectsComponent },
   { path: 'rxjs', component: RxjsComponent },
+  { path: 'crud', loadChildren: () => import('./modules/crud/crud.module').then((m) => m.CRUDModule) },
   { path: '**', component: HomeComponent },
 ];
 

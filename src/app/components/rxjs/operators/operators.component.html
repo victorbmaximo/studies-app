@@ -4,6 +4,23 @@
       Operators
     </h5>
     <hr>
+
+    <hr>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="title">Merge/Switch Map</h5>
+        <br>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Search By:</label>
+          <input #searchBox2 type="text" class="form-control" [(ngModel)]="searchInput2" />
+        </div>
+        <hr>
+        <div *ngFor="let p of people$ | async">
+          {{p.lastname}}
+        </div>
+      </div>
+    </div>
+    <br>
     <div class="card">
       <div class="card-body">
         <h5 class="title">Map</h5>
@@ -22,6 +39,24 @@
         <br>
         <p>Print even numbers only</p>
         <p>{{evenNumbers}}</p>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="title">Filter with debounceTime (pending)</h5>
+        <br>
+        <div class="form-group">
+          <label for="exampleInputEmail1"> Write data to filter</label>
+          <input #searchBox type="text" class="form-control" (input)="searchBy(searchBox.value)" />
+        </div>
+        <hr>
+        <div *ngIf="names$">
+
+          <p *ngFor="let data of names$">
+            {{data.name}}
+          </p>
+        </div>
       </div>
     </div>
     <br>

@@ -3,69 +3,75 @@
     <h5 class="card-title">
       Operators
     </h5>
-    <hr>
+    <hr />
 
-    <hr>
+    <hr />
     <div class="card">
       <div class="card-body">
         <h5 class="title">Merge/Switch Map</h5>
-        <br>
+        <br />
         <div class="form-group">
           <label for="exampleInputEmail1">Search By:</label>
           <input #searchBox2 type="text" class="form-control" [(ngModel)]="searchInput2" />
         </div>
-        <hr>
+        <hr />
         <div *ngFor="let p of people$ | async">
-          {{p.lastname}}
+          {{ p.lastname }}
         </div>
       </div>
     </div>
-    <br>
+    <br />
     <div class="card">
       <div class="card-body">
         <h5 class="title">Map</h5>
-        <br>
+        <br />
         <p>
           Posição do Click<br />
-          Screen X: <span *ngIf="positionClick.screenX > 0">{{positionClick.screenX}}</span><br />
-          Screen Y: <span *ngIf="positionClick.screenY > 0">{{positionClick.screenY}}</span>
+          Screen X:
+          <span *ngIf="positionClick.screenX > 0">
+            {{ positionClick.screenX }}
+          </span>
+          <br />
+          Screen Y:
+          <span *ngIf="positionClick.screenY > 0">
+            {{ positionClick.screenY }}
+          </span>
         </p>
       </div>
     </div>
-    <br>
+    <br />
     <div class="card">
       <div class="card-body">
         <h5 class="title">Filter</h5>
-        <br>
+        <br />
         <p>Print even numbers only</p>
-        <p>{{evenNumbers}}</p>
+        <p>{{ evenNumbers }}</p>
       </div>
     </div>
-    <br>
+    <br />
     <div class="card">
       <div class="card-body">
         <h5 class="title">Filter with debounceTime (pending)</h5>
-        <br>
+        <br />
         <div class="form-group">
           <label for="exampleInputEmail1"> Write data to filter</label>
           <input #searchBox type="text" class="form-control" (input)="searchBy(searchBox.value)" />
         </div>
-        <hr>
+        <hr />
         <div *ngIf="names$">
-
           <p *ngFor="let data of names$">
-            {{data.name}}
+            {{ data.name }}
           </p>
         </div>
       </div>
     </div>
-    <br>
+    <br />
     <div class="card">
       <div class="card-body">
         <h5 class="title">Tap</h5>
-        <br>
+        <br />
         <p *ngFor="let p of printTapResult">
-          {{p}}
+          {{ p }}
         </p>
       </div>
     </div>

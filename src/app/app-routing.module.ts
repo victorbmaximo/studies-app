@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'observables', component: ObservablesSubjectsComponent },
   { path: 'rxjs', component: RxjsComponent },
   { path: 'crud', loadChildren: () => import('./modules/crud/crud.module').then((m) => m.CRUDModule) },
+  { path: 'books-and-dvds', loadChildren: () => import('./modules/books-dvds/books-dvds.module').then((m) => m.BooksDvdsModule) },
   { path: '**', component: HomeComponent },
 ];
 

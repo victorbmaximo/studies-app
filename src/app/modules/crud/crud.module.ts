@@ -22,7 +22,7 @@ import { DepartmentService } from './services/department.service';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [ProductService, DepartmentService]
 })

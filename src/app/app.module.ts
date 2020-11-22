@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +20,10 @@ import { SubjectsComponent } from './components/observables-subjects/subjects/su
 import { RxjsComponent } from './components/rxjs/rxjs.component';
 import { BasicCreationComponent } from './components/rxjs/basic-creation/basic-creation.component';
 import { OperatorsComponent } from './components/rxjs/operators/operators.component';
+import { PanelComponent } from './components/home/panel/panel.component';
+import { AccordionComponent } from './components/home/accordion/accordion.component';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -30,9 +38,18 @@ import { OperatorsComponent } from './components/rxjs/operators/operators.compon
     RxjsComponent,
     BasicCreationComponent,
     OperatorsComponent,
+    PanelComponent,
+    AccordionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule, HttpClientModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NgbModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
